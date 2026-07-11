@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VASKEVICH — Портфолио веб-дизайнера</title>
+  <meta name="description" content="Веб-дизайн, разработка и брендинг. Создаю визуальные системы, которые вызывают эмоции." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Alumni+Sans:wght@100..900&family=Fjalla+One&family=Inter:wght@300..700&family=Six+Caps&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ============ INTRO OVERLAY ============ -->
+  <noscript><style>#intro-overlay{display:none!important;}</style></noscript>
+  <div id="intro-overlay" class="intro-overlay" role="dialog" aria-label="Интро" aria-modal="true">
+    <video class="intro-video" playsinline muted preload="auto" poster="assets/intro/intro-poster.jpg">
+      <source src="assets/intro/intro.webm" type="video/webm" />
+      <source src="assets/intro/intro.mp4" type="video/mp4" />
+    </video>
+    <div class="intro-title" aria-hidden="true"><span class="intro-title__type">VASKEVICH</span><span class="intro-title__caret"></span></div>
+    <p class="intro-sub" aria-hidden="true">Портфолио веб-дизайнера</p>
+    <div class="intro-progress" aria-hidden="true"><span class="intro-progress__bar"></span></div>
+    <button type="button" class="intro-skip" aria-label="Пропустить интро"><span class="intro-skip__text">Пропустить</span></button>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="#hero" class="logo">VASKEVICH</a>
+    <nav class="nav">
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a>
+      <a href="#reliability">Почему я</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/img/IMG_8478.JPEG" alt="VASKEVICH — портфолио веб-дизайнера" />
+    </div>
+    <span class="hero-wipe" aria-hidden="true"></span>
+    <div class="container hero-grid">
+      <aside class="hero-aside left">
+        <p class="kicker">Портфолио<br />веб-дизайнера</p>
+        <ul class="mini-list">
+          <li>UI/UX дизайн</li>
+          <li>Вёрстка</li>
+          <li>Сайты под ключ</li>
+        </ul>
+        <a href="#about" class="hero-scroll">Scroll down ↓</a>
+      </aside>
+
+      <div class="hero-spacer" aria-hidden="true"></div>
+
+      <aside class="hero-aside right">
+        <p class="hero-tagline"><span class="hero-line"><span class="red">Дизайн</span>,</span><span class="hero-line">который цепляет.</span><span class="hero-line"><span class="red">Сайт</span>, который продаёт.</span></p>
+        <p class="hero-note">Создаю стильные и функциональные сайты, которые работают на ваш успех.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section section--about about" id="about">
+    <div class="container">
+      <p class="section-head">Обо мне</p>
+      <div class="about-grid">
+        <img class="about-photo" src="assets/img/second_image.png" alt="Портрет" loading="lazy" />
+        <div class="about-content">
+          <h2>Делаю не просто сайты. Создаю визуальные системы, которые вызывают эмоции.</h2>
+          <p class="about-lead">Я веб-дизайнер и разработчик с опытом создания эстетичных, функциональных и конверсионных цифровых продуктов.</p>
+          <ul class="about-points">
+            <li class="is-accent">Индивидуальный подход к каждому проекту</li>
+            <li>Консультации на всех этапах</li>
+          </ul>
+          <a href="#services" class="link-underline">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section section--services" id="services">
+    <div class="container">
+      <p class="section-head">Услуги</p>
+      <div class="services">
+        <article>
+          <div class="service-num">01</div>
+          <h3 class="service-name">Веб-дизайн</h3>
+          <p class="service-desc">Проектирую чистые, современные и продуманные интерфейсы, которые продают и работают.</p>
+          <a href="#contacts" class="service-arrow" aria-label="Подробнее">→</a>
+        </article>
+        <article>
+          <div class="service-num">02</div>
+          <h3 class="service-name">Разработка</h3>
+          <p class="service-desc">Создаю быстрые, адаптивные и надёжные сайты на современных технологиях.</p>
+          <a href="#contacts" class="service-arrow" aria-label="Подробнее">→</a>
+        </article>
+        <article>
+          <div class="service-num">03</div>
+          <h3 class="service-name">Брендинг</h3>
+          <p class="service-desc">Разрабатываю айдентику, которая выделяет вас и запоминается.</p>
+          <a href="#contacts" class="service-arrow" aria-label="Подробнее">→</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORKS ============ -->
+  <section class="section section--works" id="works">
+    <div class="container">
+      <p class="section-head section-head--2line">Избранные<br>работы</p>
+      <div class="works-grid">
+        <a href="https://stasvaskevish-source.github.io/AutoBring/" target="_blank" rel="noopener" class="work-card tinted panel" data-photo data-label="BRING">
+          <img src="assets/img/IMG_8527.JPEG" alt="Авто BRING" loading="lazy" />
+          <span class="work-meta">
+            <span class="work-title">BRING</span>
+            <span class="work-sub">Авто BRING</span>
+          </span>
+        </a>
+        <a href="https://sybersigma.ru/" target="_blank" rel="noopener" class="work-card tinted panel" data-photo data-label="SIGMA">
+          <img src="assets/img/IMG_8525.JPEG" alt="Сувенирный SIGMA" loading="lazy" />
+          <span class="work-meta">
+            <span class="work-title">SIGMA</span>
+            <span class="work-sub">Сувенирный SIGMA</span>
+          </span>
+        </a>
+        <a href="#contacts" class="work-card work-card--empty panel" data-photo data-label="Ваш проект">
+          <img src="assets/img/IMG_8532.JPEG" alt="" loading="lazy" />
+          <span class="work-meta">
+            <span class="work-title">Тут может быть ваш сайт</span>
+            <span class="work-sub">Ваш бренд</span>
+          </span>
+        </a>
+      </div>
+      <div class="works-captions">
+        <span class="work-caption">
+          <span class="work-caption-title">AUTO BRING</span>
+          <span class="work-caption-sub">Лендинг</span>
+        </span>
+        <span class="work-caption">
+          <span class="work-caption-title">CYBER SIGMA</span>
+          <span class="work-caption-sub">Лендинг</span>
+        </span>
+        <span class="work-caption">
+          <span class="work-caption-title">ВАШ БРЕНД</span>
+          <span class="work-caption-sub">Сайт</span>
+        </span>
+      </div>
+      <a href="#contacts" class="link-underline works-more">Смотреть все →</a>
+    </div>
+  </section>
+
+  <!-- ============ APPROACH ============ -->
+  <section class="section section--approach approach" id="approach">
+    <div class="container">
+      <p class="section-head">Мой подход</p>
+      <div class="approach-grid">
+        <h2>Его невозможно забыть. Он даёт чёткий ответ без лишних слов.</h2>
+        <p class="approach-text">Я объединяю креативность с аналитикой, чтобы создавать сайты, которые не только выглядят стильно, но и приносят реальный результат.</p>
+        <a href="#contacts" class="approach-link">Консультация →</a>
+        <div class="approach-photo" data-photo data-label="Approach photo">
+          <img src="assets/img/IMG_8537.JPEG" alt="" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section--process">
+    <div class="container">
+      <p class="section-head section-head--2line">Процесс<br>работы</p>
+      <div class="process">
+        <article>
+          <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l4.5 4.5"/></svg>
+          <h3 class="step-name">Анализ</h3>
+          <p class="step-desc">Изучаю ваш бизнес, аудиторию и цели.</p>
+        </article>
+        <article>
+          <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.6"/><path d="M3 9h18M12 9v10"/></svg>
+          <h3 class="step-name">Проектирование</h3>
+          <p class="step-desc">Создаю структуру, прототип и логику.</p>
+        </article>
+        <article>
+          <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c4-6 12-6 16 0"/><circle cx="4" cy="15" r="1.5"/><circle cx="20" cy="15" r="1.5"/><path d="M8 9v-3M16 9v-3"/><circle cx="8" cy="6" r="1.2"/><circle cx="16" cy="6" r="1.2"/></svg>
+          <h3 class="step-name">Дизайн</h3>
+          <p class="step-desc">Разрабатываю уникальный визуальный стиль.</p>
+        </article>
+        <article>
+          <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6L3 12l6 6"/><path d="M15 6l6 6-6 6"/></svg>
+          <h3 class="step-name">Разработка</h3>
+          <p class="step-desc">Верстаю и оживляю интерфейс кодом.</p>
+        </article>
+        <article>
+          <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l3 4v5l-3 3-3-3V7l3-4z"/><circle cx="12" cy="9" r="1.2"/><path d="M9 12l-3 2 1-3M15 12l3 2-1-3"/><path d="M12 15v4"/></svg>
+          <h3 class="step-name">Запуск</h3>
+          <p class="step-desc">Публикую, оптимизирую и настраиваю сайт.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RELIABILITY ============ -->
+  <section class="section section--reliability reliability" id="reliability">
+    <div class="container">
+      <p class="section-head">Надёжность</p>
+      <div class="reliability-grid">
+        <div class="reliability-photo panel" data-photo data-label="Reliability photo">
+          <img src="assets/img/IMG_8541.JPEG" alt="" loading="lazy" />
+        </div>
+        <div class="reliability-content">
+          <h2>Уважение к срокам и бюджету, без сюрпризов.</h2>
+          <p>Прозрачные этапы и понятные договорённости на каждом шаге. Вы всегда знаете, где сейчас находится проект.</p>
+          <p>Работаю на результат: сроки соблюдаю, бюджет держу под контролем, о любых изменениях предупреждаю заранее.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTS ============ -->
+  <section class="section section--contacts contacts" id="contacts">
+    <div class="container">
+      <p class="section-head">Контакты</p>
+      <div class="contacts-grid">
+        <div class="contacts-left">
+          <h2>Не знаете, какой сайт<br />подойдёт именно вам?</h2>
+          <p class="lead">Напишите мне, и мы вместе обсудим ваш проект, сроки и стоимость.</p>
+        </div>
+
+        <ul class="contact-list">
+          <li><a href="mailto:stasvaskevish@gmail.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span>stasvaskevish@gmail.com</span></a></li>
+          <li><a href="https://t.me/tramsoa" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.3 15.6c-.25 1.1-.9 1.37-1.83.85l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1 .5l.36-5.1L18 5.6c.4-.36-.09-.56-.62-.2L6.9 12.13l-4.9-1.53c-1.07-.33-1.09-1.07.22-1.58L20.5 2.5c.9-.33 1.68.2 1.4 1.8z"/></svg></span><span>Telegram</span></a></li>
+          <li><a href="https://vk.ru/stasvaskevish" target="_blank" rel="noopener"><span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.16 17.2c-5.47 0-8.79-3.75-8.93-9.98h2.74c.1 4.57 2.17 6.53 3.79 6.93V7.22h2.58v3.9c1.6-.17 3.28-1.99 3.85-3.9h2.58c-.43 2.35-2.25 4.17-3.54 4.92 1.29.61 3.36 2.2 4.15 5.06h-2.84c-.62-1.92-2.15-3.41-4.2-3.6v3.6h-.31z"/></svg></span><span>ВКонтакте</span></a></li>
+        </ul>
+
+        <div class="qr-wrap">
+          <div class="qr panel" data-photo data-label="QR">
+            <img src="assets/img/IMG_8559.JPG" alt="QR Telegram @TRAMSOA" loading="lazy" />
+          </div>
+          <div class="qr panel" data-photo data-label="QR">
+            <img src="assets/img/IMG_8560.JPEG" alt="QR ВКонтакте" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-line">
+        <span>© 2026 VASKEVICH</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts/intro.js"></script>
+  <script>
+    const introPlayer = new IntroPlayer({
+      webmSrc: 'assets/intro/intro.webm',
+      mp4Src: 'assets/intro/intro.mp4',
+      posterSrc: 'assets/intro/intro-poster.jpg',
+      durationMs: 2000,
+      showOncePerSession: true,
+      ttlHours: 24,
+      storageKey: 'introSeen',
+      reducedMotionMode: 'skip',
+      transparent: false,
+      overlaySelector: '#intro-overlay',
+      siteSelector: '',            // контент не оборачиваем — оверлей непрозрачный
+      restoreFocusSelector: '.logo'
+    });
+    introPlayer.playIfNeeded();
+  </script>
+  <script src="scripts/main.js"></script>
+  <script>
+    // ===== WOW: hero entrance (#1 + #2) =====
+    (function () {
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+      hero.classList.add('hero-armed');            // взвести скрытое состояние
+      let played = false;
+      const enter = (delay) => {
+        if (played) return; played = true;
+        setTimeout(() => hero.classList.add('hero-in'), delay || 0);
+      };
+      // Старт через 250мс после полного скрытия интро — чтобы вход был виден.
+      window.addEventListener('intro:done', () => enter(250));
+      // Если интро нет/пропущено — по load.
+      window.addEventListener('load', () => setTimeout(() => enter(0), 300));
+      // Фолбэк.
+      setTimeout(() => enter(0), 4000);
+    })();
+
+    // ===== WOW: магнитная кнопка «Пропустить» =====
+    (function () {
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const btn = document.querySelector('.intro-skip');
+      if (reduced || !btn) return;
+      btn.style.transition = 'transform .2s cubic-bezier(.2,.7,.2,1)';
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    })();
+  </script>
+</body>
+</html>
