@@ -263,7 +263,7 @@
       posterSrc: 'assets/intro/intro-poster.jpg',
       durationMs: 2000,
       showOncePerSession: true,
-      ttlHours: 24,
+      ttlHours: 0,
       storageKey: 'introSeen',
       reducedMotionMode: 'skip',
       transparent: false,
@@ -283,11 +283,17 @@
       let played = false;
       const enter = (delay) => {
         if (played) return; played = true;
-        setTimeout(() => hero.classList.add('hero-in'), delay || 0);
+        setTimeout(() => {
+          // Гарантируем кадр со стартовым состоянием (.hero-armed),
+          // иначе браузер схлопывает armed+in в один кадр и transition не играет.
+          requestAnimationFrame(() => requestAnimationFrame(() => {
+            hero.classList.add('hero-in');
+          }));
+        }, delay || 0);
       };
       // Старт через 250мс после полного скрытия интро — чтобы вход был виден.
       window.addEventListener('intro:done', () => enter(250));
-      // Если интро нет/пропущено — по load.
+      // Если интро нет/пропущено/уже видели — по load.
       window.addEventListener('load', () => setTimeout(() => enter(0), 300));
       // Фолбэк.
       setTimeout(() => enter(0), 4000);
