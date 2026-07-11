@@ -313,6 +313,24 @@
       });
       btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
     })();
+
+    // ===== Пропорциональный масштаб под ширину экрана =====
+    // Сайт спроектирован под десктоп ~1600px. На более узких экранах
+    // ужимаем всё целиком через zoom, чтобы вид был одинаковый везде.
+    (function () {
+      const DESIGN_WIDTH = 1600;   // ширина, при которой оригинал не режется
+      const MIN_ZOOM = 0.2;        // не ужимать сильнее (защита на телефоне)
+      function applyZoom() {
+        const w = window.innerWidth;
+        // Не увеличиваем на широких мониторах — только ужимаем на узких.
+        let z = w >= DESIGN_WIDTH ? 1 : w / DESIGN_WIDTH;
+        if (z < MIN_ZOOM) z = MIN_ZOOM;
+        document.documentElement.style.zoom = z;
+      }
+      applyZoom();
+      window.addEventListener('resize', applyZoom);
+      window.addEventListener('orientationchange', applyZoom);
+    })();
   </script>
 </body>
 </html>
