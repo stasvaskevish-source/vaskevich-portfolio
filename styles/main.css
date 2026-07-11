@@ -834,12 +834,13 @@ h1, h2, h3 { letter-spacing: -0.01em; }
 }
 
 /* =======================================================================
-   MOBILE ADAPTATION  (<= 767px)
-   Everything below fires only under 768px. Desktop layout untouched.
+   MOBILE + NARROW ADAPTATION  (<= 1400px)
+   Desktop pixel-layout needs ~1580px to not clip at the edges. Below that,
+   fall back to a clean vertical flow. Wide desktop (>1400px) untouched.
    Strategy: undo fixed heights + absolute/transform positioning added for
    the desktop pixel-tuning, and let each section flow vertically.
    ======================================================================= */
-@media (max-width: 767px) {
+@media (max-width: 1400px) {
 
   /* --- global --- */
   body { overflow-x: hidden; }
@@ -1104,4 +1105,25 @@ h1, h2, h3 { letter-spacing: -0.01em; }
   .about h2, .approach h2, .reliability h2 { font-size: 30px; }
   .service-name { font-size: 38px; }
   .qr { width: 120px; height: 120px; }
+}
+
+/* Tablet / narrow laptop (900–1400px): keep the horizontal nav, hide burger.
+   Layout is already vertical (from the <=1400 block); only the header reverts. */
+@media (min-width: 900px) and (max-width: 1400px) {
+  .burger { display: none; }
+  .nav {
+    position: static;
+    inset: auto;
+    width: auto;
+    flex-direction: row;
+    gap: 28px;
+    padding: 0;
+    margin-right: 40px;
+    background: none;
+    backdrop-filter: none;
+    transform: none;
+    transition: none;
+  }
+  .nav a { color: #0B0B0C !important; font-size: 20px; }
+  .site-header.scrolled .nav a { color: #EDEFF2 !important; }
 }
